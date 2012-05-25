@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <!-- InstanceBegin template="../../../../../_Templates/Help_Contetns_enTitle.dwt" -->
+
+    <head>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+      <title>Synopsis</title>
+      <!-- #BeginHeadLocked "" -->
+        <link href="../02_usage/assets/default2.css" type="text/css" rel="styleSheet" />
+        <link href="../02_usage/assets/help.css" type="text/css" rel="stylesheet" media="screen" />
+        <script type="text/javascript" language="JavaScript1.4" src="../02_usage/assets/SmartHeader.js"></script>
+      <!-- #EndHeadLocked -->
+      <meta name="keywords" content="AppleScript, FileSorter" />
+    </head>
+
+    <body>
+      <p id="smartheader" style="visibility:hidden"><!-- InstanceBeginEditable name="SmartHeader" --><a href="index.html">FileSorter Help</a> <!-- InstanceEndEditable --></p>
+      <!-- InstanceBeginEditable name="Body" -->
+        <h1>FileSorter</h1>
+        
+        <p>FileSorter is an AppleScript module to sort a list of files of folders according to their view sorting order in the Finder.</p>
+        <p>FileSorter sort a list of files as follows depending on the view styles.</p>
+        
+        <h3>Icon View</h3>
+        
+        <p>When the option "Keep arranged by" is ON, a list of files is sorted with the specified property.</p>
+        <p>On the other cases, the sorting order is determined by the icon positions. It can be customized whether row wise sorting or column wise sorting by delegate method is_rowwise_for_iconview. The default behavior depends on the label position. When the label position is bottom, the sorting order is row wise. When the label position is right, the sorting order is column wise.</p>
+        
+        <p class="figure"><img src="assets/row-wise.png" alt="" border="0" livesrc="../../../_Components/row-wise.ai" width="401" height="226" /></p>
+        <p class="figure">row wise sorting</p>
+        <div align="center">
+          <p><img src="assets/column-wise.png" alt="" border="0" livesrc="../../../_Components/column-wise.ai" width="475" height="176" /></p>
+          <p>column wise sorting</p>
+        </div>
+        <h3>List View/Cover Flow View</h3>
+        
+        <p>Sort as arranged in the list view/cover flow view. For example, if the list view is sorted with modification date, the result of FileSorter is sorted with modification date.</p>
+        
+        <h3>Column View</h3>
+        
+        <p>Sort with file names in ascending order.</p>
+        <!-- InstanceEndEditable -->
+      <div class="footer">
+        <p>This page was last built on <csobj format="MedDate" h="12" region="0" t="DateTime" w="81">Tue, Jun 14, 2011</csobj> ; <csobj format="LongTime" h="12" region="0" t="DateTime" w="51">4:53:53 PM</csobj> . Thanks for checking it out!</p>
+      </div>
+    </body>
+
+  <!-- InstanceEnd -->
+
+</html>

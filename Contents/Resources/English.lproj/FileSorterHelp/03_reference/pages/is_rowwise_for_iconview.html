@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>is_rowwise_for_iconview</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link href="../assets/default.css" type="text/css" rel="stylesheet" media="all" />
+		<link href="../assets/handler_page.css" type="text/css" rel="stylesheet" media="all" />
+		<link href="../assets/applescript.css" type="text/css" rel="stylesheet" media="all" />
+		<meta name="keywords" content="is_rowwise_for_iconview" />
+		<script type="text/javascript" src="../assets/run_helpscript.js"></script>
+	</head>
+
+	<body>
+		<div style="visibility:hidden"><a href="../../" id="HelpBookRoot"></a></div>
+		<div id="smartheader">
+			<table width="95%" border="0" cellspacing="2" cellpadding="0">
+				<tr>
+					<td align="left"><a href="../contents.html">FileSorter Reference</a></td>
+					<td align="right"><a onclick="return runHelpScript(this)" href="../assets/editScript.scpt">Edit Script</a></td>
+				</tr>
+			</table>
+		</div>
+<div class="elementTitle">
+<a id="is_rowwise_for_iconview" name="is_rowwise_for_iconview">is_rowwise_for_iconview</a>
+</div>
+<p class="sourceCode">
+<span class="userDefine">is_rowwise_for_iconview</span>(<span class="userDefine">view_options</span>)
+<a href="../assets/setClipboard.scpt" onclick="return runHelpScriptWithInnerText(this)">
+<img src="../assets/Clipboard24.png" alt="copy to clipboard" align="right" />
+</a></p>
+<p>Whether items will be sorted in row wise, when the view is the icon view.</p>
+
+<p>This handler is called, when the view of the folder returned from <a href="resolve_container.html">resolve_container</a> is an icon view not arranged by a property.</p>
+<p>If this handler is omitted, the sort direction (row wise or column wise) is determined by the label position property.</p>
+<ul>
+<li>bottom : row wise</li>
+<li>right : column wise</li>
+</ul>
+
+<div class="subHeading">
+Parameters
+</div>
+<ul>
+<li>view_options (Finder's Finder window's icon view options) :
+
+The icon view options property of the folder returned from resolve_container.
+</li>
+</ul>
+<div class="subHeading">
+Result
+</div>
+<p>boolean :sorted in row wise when true is returned.</p>
+	</body>
+
+</html>

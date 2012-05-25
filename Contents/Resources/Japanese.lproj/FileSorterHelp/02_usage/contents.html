@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <!-- InstanceBegin template="../../../../../_Templates/Help_Contetns_enTitle.dwt" -->
+
+    <head>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+      <title>Usage</title>
+      <link href="assets/AppleScript.css" rel="stylesheet" type="text/css" media="all" />
+      <!-- #BeginHeadLocked "" -->
+        <link href="assets/default2.css" type="text/css" rel="styleSheet" />
+        <link href="assets/help.css" type="text/css" rel="stylesheet" media="screen" />
+        <script type="text/javascript" language="JavaScript1.4" src="assets/SmartHeader.js"></script>
+      <!-- #EndHeadLocked -->
+      <meta name="keywords" content="AppleScript, FileSorter" />
+    </head>
+
+    <body>
+      <p id="smartheader" style="visibility:hidden"><!-- InstanceBeginEditable name="SmartHeader" --><a href="../01_synopsis/index.html">FileSorter Help</a> <!-- InstanceEndEditable --></p>
+      <!-- InstanceBeginEditable name="Body" -->
+        <h1>Usage</h1>
+        
+        <p>もっとも簡単な使い方、以下のようになります。この場合は Finder の insertion location の表示形式に従って、その中のすべてのファイル/フォルダを取得してソートします。</p>
+        
+        <div class="sourceCode">
+<div>
+<span class="langKeyword">property</span> <span class="userDefine">FileSorter</span> <span class="normal">:</span> <span class="appKeyword">module</span>
+</div>
+<div>
+<span class="appKeyword">boot</span> <span class="normal">(</span><span class="appKeyword">module loader</span><span class="normal">)</span> <span class="appKeyword">for</span> <span class="langKeyword">me</span>
+</div>
+<br />
+<div>
+<span class="normal">(</span><span class="appKeyword">make</span> <span class="userDefine">FileSorter</span><span class="normal">)'s</span> <span class="userDefine">sorted_items</span><span class="normal">()</span>
+</div>
+<div class="scriptButton" >
+<input type="button" value="sample1" onclick="location.href='applescript://com.apple.scripteditor?action=new%26script=property%20FileSorter%20:%20module%0Dboot%20(module%20loader)%20for%20me%0D%0D(make%20FileSorter)%27s%20sorted_items()'" />
+</div>
+</div>
+        
+        <p>delegate を設定することにより、以下の動作をカスタマイズできます。</p>
+        <ul>
+          <li>表示形式を参照するフォルダ  -- <a href="../03_reference/pages/resolve_container.html">resolve_container</a></li>
+          <li>ソートする項目 -- <a href="../03_reference/pages/target_items_at.html">target_items_at</a></li>
+          <li>アイコン表示の場合のソート方向（行方向か列方向か） -- <a href="../03_reference/pages/is_rowwise_for_iconview.html">is_rowwise_for_iconview</a></li>
+        </ul>
+        <p>次のサンプルは、ホームフォルダの表示形式に従って、ホームフォルダの中のフォルダだけを取得してソートします。また、アイコン表示かつ「常に次の項目で並び替える」が設定されていない場合は、常に行方向にソートします。</p>
+        
+        <div class="sourceCode">
+<div>
+<span class="langKeyword">property</span> <span class="userDefine">FileSorter</span> <span class="normal">:</span> <span class="appKeyword">module</span>
+</div>
+<br />
+<div>
+<span class="appKeyword">boot</span> <span class="normal">(</span><span class="appKeyword">module loader</span><span class="normal">)</span> <span class="appKeyword">for</span> <span class="langKeyword">me</span>
+</div>
+<br />
+<div>
+<span class="langKeyword">script</span> <span class="userDefine">SorterDelegate</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">on</span> <span class="userDefine">resolve_container</span><span class="normal">()</span>
+</div>
+<div style="text-indent:8ex;">
+<span class="langKeyword">return</span> <span class="appKeyword">path to</span> <span class="appKeyword">home folder</span> <span class="appKeyword">as</span> <span class="appKeyword">alias</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">end</span> <span class="userDefine">resolve_container</span>
+</div>
+<br />
+<div style="text-indent:4ex;">
+<span class="langKeyword">on</span> <span class="userDefine">target_items_at</span><span class="normal">(</span><span class="userDefine">a_location</span><span class="normal">)</span>
+</div>
+<div style="text-indent:8ex;">
+<span class="langKeyword">tell</span> <span class="appKeyword">application</span> <span class="normal">&quot;Finder&quot;</span>
+</div>
+<div style="text-indent:12ex;">
+<span class="langKeyword">set</span> <span class="userDefine">a_list</span> <span class="langKeyword">to</span> <span class="langKeyword">every</span> <span class="appKeyword">folder</span> <span class="langKeyword">of</span> <span class="userDefine">a_location</span>
+</div>
+<div style="text-indent:8ex;">
+<span class="langKeyword">end</span> <span class="langKeyword">tell</span>
+</div>
+<br />
+<div style="text-indent:8ex;">
+<span class="langKeyword">repeat</span> <span class="langKeyword">with</span> <span class="userDefine">an_item</span> <span class="langKeyword">in</span> <span class="userDefine">a_list</span>
+</div>
+<div style="text-indent:12ex;">
+<span class="langKeyword">set</span> <span class="appKeyword">contents</span> <span class="langKeyword">of</span> <span class="userDefine">an_item</span> <span class="langKeyword">to</span> <span class="userDefine">an_item</span> <span class="langKeyword">as</span> <span class="appKeyword">alias</span>
+</div>
+<div style="text-indent:8ex;">
+<span class="langKeyword">end</span> <span class="langKeyword">repeat</span>
+</div>
+<div style="text-indent:8ex;">
+<span class="langKeyword">return</span> <span class="userDefine">a_list</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">end</span> <span class="userDefine">target_items_at</span>
+</div>
+<br />
+<div style="text-indent:4ex;">
+<span class="langKeyword">on</span> <span class="userDefine">is_rowwise_for_iconview</span><span class="normal">(</span><span class="userDefine">view_options</span><span class="normal">)</span>
+</div>
+<div style="text-indent:8ex;">
+<span class="langKeyword">return</span> <span class="appKeyword">true</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">end</span> <span class="userDefine">is_rowwise_for_iconview</span>
+</div>
+<div>
+<span class="langKeyword">end</span> <span class="langKeyword">script</span>
+</div>
+<br />
+<div>
+<span class="userDefine">FileSorter</span><span class="normal">'s</span> <span class="userDefine">make_with_delegate</span><span class="normal">(</span><span class="userDefine">SorterDelegate</span><span class="normal">)'s</span> <span class="userDefine">sorted_items</span><span class="normal">()</span>
+</div>
+<div class="scriptButton" >
+<input type="button" value="sample2" onclick="location.href='applescript://com.apple.scripteditor?action=new%26script=property%20FileSorter%20:%20module%0D%0Dboot%20(module%20loader)%20for%20me%0D%0Dscript%20SorterDelegate%0D%09on%20resolve_container()%0D%09%09return%20path%20to%20home%20folder%20as%20alias%0D%09end%20resolve_container%0D%09%0D%09on%20target_items_at(a_location)%0D%09%09tell%20application%20%22Finder%22%0D%09%09%09set%20a_list%20to%20every%20folder%20of%20a_location%0D%09%09end%20tell%0D%09%09%0D%09%09repeat%20with%20an_item%20in%20a_list%0D%09%09%09set%20contents%20of%20an_item%20to%20an_item%20as%20alias%0D%09%09end%20repeat%0D%09%09return%20a_list%0D%09end%20target_items_at%0D%09%0D%09on%20is_rowwise_for_iconview(view_options)%0D%09%09return%20true%0D%09end%20is_rowwise_for_iconview%0Dend%20script%0D%0DFileSorter%27s%20make_with_delegate(SorterDelegate)%27s%20sorted_items()'" />
+</div>
+</div>
+      <!-- InstanceEndEditable -->
+      <div class="footer">
+        <p>This page was last built on <csobj format="MedDate" h="12" region="0" t="DateTime" w="81">Thu, Oct 21, 2010</csobj> ; <csobj format="LongTime" h="12" region="0" t="DateTime" w="51">1:35:20 PM</csobj> . Thanks for checking it out!</p>
+      </div>
+    </body>
+
+  <!-- InstanceEnd -->
+
+</html>
