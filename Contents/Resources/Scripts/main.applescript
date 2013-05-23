@@ -1,5 +1,5 @@
 property name : "FileSorter"
-property version : "3.1.2"
+property version : "3.1.3"
 
 property SortEngine : module
 property XList : module
@@ -36,7 +36,7 @@ on module loaded
 end module loaded
 
 (*!@title FileSorter Reference
-* Version : 3.1.2
+* Version : 3.1.3
 * Author : Tetsuro KURITA ((<tkurita@mac.com>))
 *)
 
@@ -212,21 +212,26 @@ on sort_by(sort_key)
 	
 	if class of item 1 of source_list is in _text_classes then
 		script to_hfspath
-			on do(an_item)
-				set contents of an_item to an_item as Unicode text
+			on do(an_item, sender)
+				tell sender
+					set_item_at(an_item as Unicode text, current_index())
+				end tell
 			end do
 		end script
 		set fileref_converter to to_hfspath
 	else
 		script to_alias
-			on do(an_item)
-				set contents of an_item to an_item as alias
+			on do(an_item, sender)
+				tell sender
+					set_item_at(an_item as alias, current_index())
+				end tell
 			end do
 		end script
 		set fileref_converter to to_alias
 	end if
+	
 	set sorted_list to XList's make_with(sorted_list)
-	sorted_list's each(fileref_converter)
+	sorted_list's enumerate(fileref_converter)
 	return sorted_list's list_ref()
 end sort_by
 
@@ -499,7 +504,7 @@ on debug()
 end debug
 
 on run --test code
-	return debug()
+	--return debug()
 	try
 		show helpbook (path to me) with recovering InfoPlist
 	on error msg number errno
