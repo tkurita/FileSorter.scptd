@@ -2,7 +2,7 @@ property name : "FileSorter"
 property version : "3.1.3"
 
 property SortEngine : module
-property XList : module
+property XList : module 1.6
 
 property _target_container : missing value
 property _info_handler : missing value
@@ -43,9 +43,6 @@ end module loaded
 (*!@group Constructor Methods *)
 
 (*!@abstruct
-<!-- begin locale ja -->
-FileSorter のインスタンスを生成します。
-<!-- begin locale en -->
 Make a new FileSorter instance
 <!-- end locale -->
 @result script object :
