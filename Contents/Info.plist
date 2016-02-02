@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleGetInfoString</key>
-	<string>3.1.4 copyright 1999-2013, Tetsuro KURITA</string>
+	<string>3.1.5 copyright 1999-2016, Tetsuro KURITA</string>
 	<key>CFBundleHelpBookFolder</key>
 	<string>FileSorterHelp</string>
 	<key>CFBundleHelpBookName</key>
@@ -11,11 +11,11 @@
 	<key>CFBundleIdentifier</key>
 	<string>Scriptfactory.FileSorter</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.1.4</string>
+	<string>3.1.5</string>
 	<key>CFBundleVersion</key>
-	<string>3.1.4</string>
+	<string>3.1.5</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>copyright 1999-2013, Tetsuro KURITA</string>
+	<string>copyright 1999-2016, Tetsuro KURITA</string>
 	<key>WindowState</key>
 	<dict>
 		<key>dividerCollapsed</key>
