@@ -11,13 +11,17 @@
 	<key>CFBundleIdentifier</key>
 	<string>Scriptfactory.FileSorter</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.1.5</string>
+	<string>3.1.6</string>
 	<key>CFBundleVersion</key>
-	<string>3.1.5</string>
+	<string>3.1.6</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>copyright 1999-2016, Tetsuro KURITA</string>
 	<key>WindowState</key>
 	<dict>
+		<key>bundleDividerCollapsed</key>
+		<false/>
+		<key>bundlePositionOfDivider</key>
+		<real>559</real>
 		<key>dividerCollapsed</key>
 		<false/>
 		<key>eventLogLevel</key>
@@ -27,9 +31,9 @@
 		<key>positionOfDivider</key>
 		<real>467</real>
 		<key>savedFrame</key>
-		<string>89 118 858 760 0 0 1440 878 </string>
-		<key>selectedTabView</key>
-		<string>event log</string>
+		<string>89 117 858 760 0 0 1440 877 </string>
+		<key>selectedTab</key>
+		<string>log</string>
 	</dict>
 </dict>
 </plist>
