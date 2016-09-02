@@ -9,7 +9,7 @@
 	<key>CFBundleHelpBookName</key>
 	<string>FileSorter Help</string>
 	<key>CFBundleIdentifier</key>
-	<string>Scriptfactory.FileSorter</string>
+	<string>net.script-factory.FileSorter</string>
 	<key>CFBundleShortVersionString</key>
 	<string>3.1.6</string>
 	<key>CFBundleVersion</key>
