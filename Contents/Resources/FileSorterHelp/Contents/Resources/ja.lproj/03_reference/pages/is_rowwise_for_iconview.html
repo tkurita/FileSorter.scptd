@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>is_rowwise_for_iconview</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link href="../assets/default.css" type="text/css" rel="stylesheet" media="all" />
+		<link href="../assets/handler_page.css" type="text/css" rel="stylesheet" media="all" />
+		<link href="../assets/applescript.css" type="text/css" rel="stylesheet" media="all" />
+		<meta name="keywords" content="is_rowwise_for_iconview, FileSorter" />
+		<script type="text/javascript" src="../assets/run_helpscript.js"></script>
+        <link id="helpviewer-handler-helper" href="../assets-helpbook/helpviewer-handler-helper.scpt" />
+        <script type="text/javascript" src="../assets-helpbook/helpviewer-handler-enable.js"></script>
+		<link href="../../" id="HelpBookRoot" />
+	</head>
+
+	<body>
+		<div id="navi-bar">
+			<div class="edit-script-link">
+			<a onclick="return runHelpScriptWithBundleRoot(this)" href="../assets-helpbook/editScript.scpt">Edit Script</a>
+			</div>
+			<div class="left-contents">
+			<div class="to-root">
+			<a href="../index.html">FileSorter Reference</a>
+			</div>
+			</div>
+		</div>
+		<div id="contents">
+		<div class="elementTitle">
+<a id="is_rowwise_for_iconview" name="is_rowwise_for_iconview">is_rowwise_for_iconview</a>
+</div>
+<p class="sourceCode">
+<span class="userDefine">is_rowwise_for_iconview</span><span class="normal">(</span><span class="userDefine">view_options</span><span class="normal">)</span>
+<a href="../assets-helpbook/setClipboard.scpt" onclick="return runHelpScriptWithInnerText(this)">
+<img src="../assets-helpbook/Clipboard24.png" alt="copy to clipboard" align="right" />
+</a></p>
+<p>アイコン表示の時、行方向でソートするか。</p>
+
+
+
+<p><a href="resolve_container.html">resolve_container</a> で返されたフォルダが、何からの属性で並び替えが行われていないアイコン表示の場合に呼ばれます。</p>
+<p>delegate にこのハンドラが実装されていないときは、label position にしたがって、ソート方向が決定されます。</p>
+<ul>
+<li>bottom の時、行方向のソート</li>
+<li>right の時、列方向のソート</li>
+</ul>
+
+<div class="subHeading">
+Parameters
+</div>
+<ul>
+<li>view_options (Finder's Finder window's icon view options) :
+
+resolve_container で返されたフォルダの icon view options property
+</li>
+</ul>
+<div class="subHeading">
+Result
+</div>
+<p>boolean :true を返したら行方向にソート</p>
+		</div>
+	</body>
+
+</html>
