@@ -6,7 +6,7 @@ a:active { color: #f66  }
 body, td { font-size: 10pt; }body {font-family: "Lucida Grande", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif; color: black; background-color: white; margin: 0; padding: 0; }
 h1 { font-weight: bold; font-size: 250%; font-family: Times, serif; margin: 0 0 1.5ex; padding: 1ex 0 0.5ex; border-bottom: thick solid gray          }
 h2 { font-weight: bold; font-size: 130%; font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', Arial, sans-serif  ; }
-h3 { font-weight: bold; font-size: 110%  ; font-family: sans-serif; }
+h3 { font-weight: bold; font-size: 110%  ; }
 h4   {	margin-left: 1em }
 p     {	line-height: 160%;
 	margin-right: 0.5em;

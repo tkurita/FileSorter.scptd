@@ -32,7 +32,7 @@
           
           <div class="sourceCode" style="">
     <div class="scriptButton" style="float:right;" >
-        <input type="button" value="Open this script : simple-sample" onclick="document.location = this.src" src="applescript://com.apple.scripteditor?action=new&amp;script=use%20FileSorter%20:%20script%20%22FileSorter%22%0D%0D(make%20FileSorter)%27s%20sorted_items()" />
+        <input type="button" value="simple-sample" onclick="document.location = this.src" src="applescript://com.apple.scripteditor?action=new&amp;script=use%20FileSorter%20:%20script%20%22FileSorter%22%0D%0D(make%20FileSorter)%27s%20sorted_items()" />
     </div>
 <div>
 <span class="langKeyword">use</span> <span class="userDefine">FileSorter</span><span class="normal"> : </span><span class="className">script</span><span class="normal"> &quot;FileSorter&quot;</span>
@@ -58,7 +58,7 @@
           
           <div class="sourceCode" style="">
     <div class="scriptButton" style="float:right;" >
-        <input type="button" value="Open this script : sort-homefolder" onclick="document.location = this.src" src="applescript://com.apple.scripteditor?action=new&amp;script=use%20scripting%20additions%0Duse%20FileSorter%20:%20script%20%22FileSorter%22%0D%0Dscript%20SorterDelegate%0D%09on%20resolve_container()%0D%09%09return%20path%20to%20home%20folder%20as%20alias%0D%09end%20resolve_container%0D%09%0D%09on%20target_items_at(a_location)%0D%09%09tell%20application%20%22Finder%22%0D%09%09%09set%20a_list%20to%20every%20folder%20of%20a_location%0D%09%09end%20tell%0D%09%09%0D%09%09repeat%20with%20an_item%20in%20a_list%0D%09%09%09set%20contents%20of%20an_item%20to%20an_item%20as%20alias%0D%09%09end%20repeat%0D%09%09return%20a_list%0D%09end%20target_items_at%0D%09%0D%09on%20is_rowwise_for_iconview(view_options)%0D%09%09return%20true%0D%09end%20is_rowwise_for_iconview%0Dend%20script%0D%0DFileSorter%27s%20make_with_delegate(SorterDelegate)%27s%20sorted_items()" />
+        <input type="button" value="sort-homefolder" onclick="document.location = this.src" src="applescript://com.apple.scripteditor?action=new&amp;script=use%20scripting%20additions%0Duse%20FileSorter%20:%20script%20%22FileSorter%22%0D%0Dscript%20SorterDelegate%0D%09on%20resolve_container()%0D%09%09return%20path%20to%20home%20folder%20as%20alias%0D%09end%20resolve_container%0D%09%0D%09on%20target_items_at(a_location)%0D%09%09tell%20application%20%22Finder%22%0D%09%09%09set%20a_list%20to%20every%20folder%20of%20a_location%0D%09%09end%20tell%0D%09%09%0D%09%09repeat%20with%20an_item%20in%20a_list%0D%09%09%09set%20contents%20of%20an_item%20to%20an_item%20as%20alias%0D%09%09end%20repeat%0D%09%09return%20a_list%0D%09end%20target_items_at%0D%09%0D%09on%20is_rowwise_for_iconview(view_options)%0D%09%09return%20true%0D%09end%20is_rowwise_for_iconview%0Dend%20script%0D%0DFileSorter%27s%20make_with_delegate(SorterDelegate)%27s%20sorted_items()" />
     </div>
 <div>
 <span class="langKeyword">use</span> <span class="className">scripting additions</span>
@@ -129,7 +129,7 @@
         <!-- InstanceEndEditable --></div>
       <!-- InstanceBeginEditable name="prev-next-item" --><div class="prev-next-item"><a href="../01_synopsis/index.html"><span class="navibar-prev">Synopsis</span></a>|<a href="../03_reference/index.html"><span class="navibar-next">FileSorter Reference</span></a></div><!-- InstanceEndEditable -->
       <div class="footer">
-        <p>This page was last built on <csobj format="MedDate" h="10" region="0" t="DateTime" w="65">Fri, Jan 31, 2020</csobj> ; <csobj format="LongTime" h="10" region="0" t="DateTime" w="46">9:14:04 AM</csobj> . Thanks for checking it out!</p>
+        <p>This page was last built on <csobj format="MedDate" h="10" region="0" t="DateTime" w="72">Tue, Apr 28, 2020</csobj> ; <csobj format="LongTime" h="10" region="0" t="DateTime" w="50">11:33:23 PM</csobj> . Thanks for checking it out!</p>
       </div>
     </body>
 
